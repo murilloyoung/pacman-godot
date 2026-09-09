@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://comr6t7d4el21"]
+
+[ext_resource type="Script" uid="uid://buj2e4symeqg3" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="Script" uid="uid://6mbkl2qch2m7" path="res://maze.gd" id="2_lquwl"]
+[ext_resource type="Script" uid="uid://b1cdlhahi431n" path="res://pacman.gd" id="3_7mycd"]
+[ext_resource type="Script" uid="uid://c1jhvraqynl6d" path="res://ghost.gd" id="4_272bh"]
+
+[node name="Main" type="Node2D" unique_id=525607552]
+script = ExtResource("1_1bvp3")
+
+[node name="Maze" type="Node2D" parent="." unique_id=1339245644]
+script = ExtResource("2_lquwl")
+
+[node name="Pacman" type="Node2D" parent="." unique_id=1068894785]
+position = Vector2(252, 468)
+script = ExtResource("3_7mycd")
+
+[node name="Ghosts" type="Node2D" parent="." unique_id=2029380369]
+
+[node name="Ghost1" type="Node2D" parent="Ghosts" unique_id=725153153]
+position = Vector2(228, 252)
+script = ExtResource("4_272bh")
+
+[node name="Ghost2" type="Node2D" parent="Ghosts" unique_id=1295108103]
+position = Vector2(252, 252)
+script = ExtResource("4_272bh")
+
+[node name="Ghost3" type="Node2D" parent="Ghosts" unique_id=1893787687]
+position = Vector2(276, 252)
+script = ExtResource("4_272bh")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1291696486]
+
+[node name="ScoreLabel" type="Label" parent="UI" unique_id=1647622077]
+custom_minimum_size = Vector2(10, 10)
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Pontuação: 0"
